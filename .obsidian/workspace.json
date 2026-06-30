@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c1865be62bb0f9e9",
+        "id": "68028bb9fa892a2d",
         "type": "tabs",
         "children": [
           {
-            "id": "ee67080850f76014",
+            "id": "0ff973db36f245ac",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Active Directory/Lateral Movement/Double Hop Problem.md",
+                "file": "Playbook/6. Active Directory.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Double Hop Problem"
+              "title": "6. Active Directory"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "f9983b3c351d5c00",
@@ -183,34 +184,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "ee67080850f76014",
+  "active": "0ff973db36f245ac",
   "lastOpenFiles": [
+    "Active Directory/Enumeration/ACL Enumeration.md",
     "Playbook/6. Active Directory.md",
+    "Active Directory/Enumeration/Trust Relationships Enumeration.md",
+    "Tools/BloodHound.md",
+    "Active Directory/Enumeration/Enumeration With Credentials.md",
+    "Active Directory/Enumeration/Enumerating Security Controls.md",
+    "Active Directory/Enumeration/Password Policy Enumeration.md",
+    "Active Directory/Enumeration/User and Hosts Enumeration.md",
+    "Tools/Powerview.md",
+    "Windows/Recon & Enumeration/Windows Host Recon.md",
+    "Windows/Recon & Enumeration/Legacy Operating Systems.md",
+    "Playbook/5. Windows.md",
+    "Playbook/3. Service & Applications.md",
+    "Playbook/2. Web Applications.md",
+    "Web Applications/Enumeration/Fingerprinting & Tech Detection.md",
+    "Web Applications/Enumeration/Directory & Page Fuzzing.md",
+    "Web Applications/Enumeration/OSINT.md",
+    "Web Applications/Enumeration/JavaScript Enumeration.md",
+    "Playbook/Directory %26 Page Fuzzing.md",
+    "Playbook/4. Linux.md",
+    "Active Directory/Lateral Movement/Double Hop Problem.md",
     "Active Directory/Lateral Movement/WinRM - Powershell Remoting.md",
     "Active Directory/Lateral Movement/RDP Lateral Movement.md",
-    "Active Directory/Lateral Movement/Double Hop Problem.md",
     "Active Directory/Lateral Movement/SCF & LNK Hash Capture.md",
     "Active Directory/Lateral Movement/NTDS.dit Dump.md",
     "Active Directory/Lateral Movement/Pass-The-Ticket from Windows.md",
-    "Active Directory/Lateral Movement/Pass-The-Certificate.md",
-    "Active Directory/Lateral Movement/Overpass-The-Hash (AD).md",
-    "Active Directory/Exploitation/Password Spraying & Credential Stuffing.md",
-    "Active Directory/Lateral Movement/MSSQL Server.md",
-    "Playbook/5. Windows.md",
-    "Windows/Lateral Movement/Pass the Certificate.md",
-    "Windows/Lateral Movement/Pass the Ticket.md",
-    "Utilities, Scripts & Payloads/Pivoting, Tunneling & Port Forwarding.md",
-    "Windows/Credential Access/Credential Hunting.md",
-    "Windows/Lateral Movement/Pass The Hash.md",
-    "Windows/Lateral Movement/LSASS Dump.md",
-    "Windows/Lateral Movement/SAM, SYSTEM and SECURITY Dump.md",
-    "Windows/Lateral Movement/Credential Hunting in Network Shares.md",
-    "Windows/Lateral Movement/Credential Hunting in Windows.md",
-    "Active Directory/Exploitation/Trust Abuse - Cross Forest.md",
-    "Playbook/1. Initial Enumeration.md",
-    "Playbook/2. Web Applications.md",
-    "Playbook/4. Linux.md",
-    "Linux/Lateral Movement/Pass The Ticket from Linux.md",
     "Utilities, Scripts & Payloads",
     "Linux/Lateral Movement",
     "Web Applications/Server-Side Attacks",

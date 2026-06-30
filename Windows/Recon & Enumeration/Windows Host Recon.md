@@ -14,9 +14,11 @@
 ## Network Information
 
 ```powershell
-ipconfig /all ### shows all virtual or physical networks 
-arp -a ### hosts we recently ocmmunicated with, ARP cache
-route print ### 
+ipconfig /all ### shows all virtual or physical networks
+ 
+arp -a ### hosts we recently communicated with, ARP table/cache
+
+route print ### routing table
 ```
 
 ---
