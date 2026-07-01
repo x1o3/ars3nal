@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e08f98476ef60c92",
+        "id": "ca8fb19695909e4e",
         "type": "tabs",
         "children": [
           {
-            "id": "b308fc05d149fb57",
+            "id": "5ef450fee3d61b51",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Utilities, Scripts & Payloads/TTY Shells.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "TTY Shells"
             }
           }
         ]
@@ -179,34 +183,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "c369dba7bfc0e38b",
+  "active": "5ef450fee3d61b51",
   "lastOpenFiles": [
-    "Active Directory/Exploitation/Kerberoasting from Windows.md",
+    "Utilities, Scripts & Payloads/Password Cracking.md",
+    "Utilities, Scripts & Payloads/TTY Shells.md",
+    "Utilities, Scripts & Payloads/Shells and Payloads.md",
+    "Utilities, Scripts & Payloads/Tools/SQLMap.md",
+    "Utilities, Scripts & Payloads/Tools/ZAP Proxy.md",
+    "Utilities, Scripts & Payloads/Tools/Shodan.md",
+    "Utilities, Scripts & Payloads/Tools/Powerview.md",
+    "Utilities, Scripts & Payloads/Tools/Nuclei.md",
+    "Utilities, Scripts & Payloads/Tools/Nmap.md",
+    "Utilities, Scripts & Payloads/Tools/Nikto.md",
+    "Utilities, Scripts & Payloads/Tools/Ligolo-ng.md",
+    "Utilities, Scripts & Payloads/Tools/Gobuster.md",
+    "Utilities, Scripts & Payloads/Tools/Google Dorking.md",
+    "Utilities, Scripts & Payloads/Tools/GitHub Dorking.md",
+    "Utilities, Scripts & Payloads/Tools/ffuf.md",
+    "Utilities, Scripts & Payloads/Tools/Eyewitness.md",
+    "Utilities, Scripts & Payloads/Tools/Dalfox.md",
+    "Utilities, Scripts & Payloads/Tools/Bloody AD.md",
+    "Utilities, Scripts & Payloads/Tools/BloodHound.md",
+    "Utilities, Scripts & Payloads/Tools/Aquatone.md",
+    "Utilities, Scripts & Payloads/Tools/Amass.md",
+    "Utilities, Scripts & Payloads/Pivoting, Tunneling & Port Forwarding.md",
+    "Utilities, Scripts & Payloads/Reporting.md",
+    "Utilities, Scripts & Payloads/File Transfers.md",
+    "Utilities, Scripts & Payloads/Certutil.md",
     "Playbook/6. Active Directory.md",
-    "Tools/Bloody AD.md",
-    "Active Directory/Exploitation/Misconfigurations.md",
-    "Active Directory/Enumeration/Enumeration With Credentials.md",
-    "Windows/Recon & Enumeration/Windows Host Recon.md",
-    "Active Directory/Exploitation/Trust Abuse - Cross Forest.md",
-    "Active Directory/Exploitation/Trust Abuse - Child to Parent.md",
-    "Active Directory/Exploitation/DCSync.md",
-    "Active Directory/Exploitation/noPac.md",
-    "Active Directory/Exploitation/PetitPotam.md",
-    "Active Directory/Exploitation/PrintNightmare.md",
-    "Active Directory/Exploitation/Group Policy Preferences (GPP) Password Abuse.md",
-    "Active Directory/Exploitation/Group Policy Object (GPO) Abuse.md",
-    "Active Directory/Exploitation/Kerberoasting - TGS.md",
-    "Active Directory/Exploitation/AS-REP Roasting - TGT.md",
-    "Active Directory/Exploitation/ACL Abuse.md",
-    "Active Directory/Exploitation/LLMNR & NBT-NS Poisoning.md",
-    "Active Directory/Enumeration/User Enumeration.md",
-    "Active Directory/Enumeration/ACL Enumeration.md",
-    "Active Directory/Enumeration/Trust Relationships Enumeration.md",
-    "Tools/BloodHound.md",
-    "Active Directory/Enumeration/Enumerating Security Controls.md",
-    "Active Directory/Enumeration/Password Policy Enumeration.md",
-    "Active Directory/Enumeration/User and Hosts Enumeration.md",
-    "Tools/Powerview.md",
     "Utilities, Scripts & Payloads",
     "Linux/Lateral Movement",
     "Web Applications/Server-Side Attacks",
