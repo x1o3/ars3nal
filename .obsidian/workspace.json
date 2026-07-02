@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e0e804bca483ccc1",
+        "id": "18d9b1c190433127",
         "type": "tabs",
         "children": [
           {
-            "id": "ce47c44ea18108fe",
+            "id": "153a0542e0178aaf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Playbook/3. Service & Applications.md",
+                "file": "Playbook/1. Initial Enumeration.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3. Service & Applications"
+              "title": "1. Initial Enumeration"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "f9983b3c351d5c00",
@@ -183,43 +184,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "ce47c44ea18108fe",
+  "active": "153a0542e0178aaf",
   "lastOpenFiles": [
-    "Services & Applications/Databases/MSSQL (1433,2433).md",
+    "Utilities/Tools/ZAP Proxy.md",
+    "Utilities/Tools/SQLMap.md",
+    "Utilities/Tools/Shodan.md",
+    "Utilities/Tools/Nuclei.md",
+    "Utilities/Tools/Powerview.md",
+    "Utilities/Tools/Nmap.md",
+    "Utilities/Tools/Nikto.md",
+    "Utilities/Tools/Ligolo-ng.md",
+    "Utilities/Tools/Gobuster.md",
+    "Utilities/Tools/ffuf.md",
+    "Utilities/Tools/Eyewitness.md",
+    "Utilities/Tools/Dalfox.md",
+    "Utilities/Tools/Bloody AD.md",
+    "Utilities/Tools/BloodHound.md",
+    "Utilities/Tools/Aquatone.md",
+    "Utilities/Tools/Amass.md",
     "Playbook/3. Service & Applications.md",
-    "Services & Applications/Databases/PostgreSQL (5432-3).md",
-    "Services & Applications/Databases/MySQL (3306).md",
-    "Services & Applications/Services/RDP (3389).md",
-    "Services & Applications/Services/R-Services (512-4).md",
-    "Services & Applications/Services/RSync (873).md",
-    "Services & Applications/Applications/LDAP (389,636).md",
-    "Services & Applications/Services/Kerberos (88).md",
-    "Services & Applications/Services/NetBIOS (137,138,139).md",
-    "Services & Applications/Services/NFS (111,2049).md",
-    "Services & Applications/Services/SMB (139,445).md",
-    "Services & Applications/Services/SMTP (25, 465, 587).md",
-    "Services & Applications/Services/SNMP (161, 162).md",
-    "Services & Applications/Services/NTP (123).md",
-    "Services & Applications/Services/Java RMI (1099).md",
-    "Services & Applications/Services/IPMI (623).md",
-    "Services & Applications/Services/Oracle TNS (1521).md",
-    "Services & Applications/Services/IMAP, POP3 (143, 993 - 110, 995).md",
-    "Services & Applications/Services/FTP (21).md",
+    "3. Services & Applications/Applications/Drupal (80, 443).md",
+    "3. Services & Applications/Applications/Tomcat (8080, 8443).md",
+    "3. Services & Applications/Applications/Joomla (80, 443).md",
+    "Playbook/7. Utilities.md",
+    "Utilities/Reporting.md",
+    "3. Services & Applications/Applications/Others.md",
+    "3. Services & Applications/Applications/PRTG Network Monitor (80, 443, 8080).md",
+    "3. Services & Applications/Applications/osTicket (80, 443).md",
     "Playbook/6. Active Directory.md",
-    "Services & Applications/Services/DNS (53).md",
-    "Utilities, Scripts & Payloads/TTY Shells.md",
-    "Utilities, Scripts & Payloads/Password Cracking.md",
-    "Utilities, Scripts & Payloads/Shells and Payloads.md",
-    "Utilities, Scripts & Payloads/Tools/SQLMap.md",
-    "Utilities, Scripts & Payloads",
-    "Linux/Lateral Movement",
-    "Web Applications/Server-Side Attacks",
-    "Web Applications/Access Control",
-    "Web Applications/Client-Side Attacks",
-    "Web Applications/File & Upload Attacks",
-    "Web Applications/Injection",
+    "Utilities",
+    "4. Linux/Lateral Movement",
+    "2. Web Applications/Server-Side Attacks",
+    "2. Web Applications/Access Control",
+    "2. Web Applications/Client-Side Attacks",
+    "2. Web Applications/File & Upload Attacks",
+    "2. Web Applications/Injection",
     "Web Server/Authentication Attacks",
-    "Web Applications/Enumeration",
-    "Windows/Kernel & Last Resort"
+    "2. Web Applications/Enumeration",
+    "5. Windows/Kernel & Last Resort"
   ]
 }

@@ -7,6 +7,7 @@
 - [ ] [[#Making Custom Wordlists]]
 - [ ] [[#Making Wordlist Mutations]]
 - [ ] [[#Wordlist Optimisation]]
+- [ ] [[#Hydra]]
 
 ---
 
@@ -110,10 +111,18 @@ hashcat --force password.list -r custom.rule --stdout | sort -u > new.list
 
 ```sh
 sed -ri '/^.{,7}$/d' wordlist.txt
-### Remove passwords shorter than 8 characters from wordlist
+grep -E '^.{8,}$' wordlist.txt > wl.txt
+### Keep passwords of atlest 8 chars
 
 sed -ri '/[0-9]+/!d' wordlist.txt
+grep -E '[0-9]' wordlist.txt > wl.txt
 ### Remove passwords without numbers from wordlist
+
+grep -E '[A-Z]' wordlist.txt > wl.txt
+### atleast one Uppercase
+
+grep -E '[a-z]' wordlist.txt > wl.txt
+### atleast one lowercase
 
 sort -u wordlist.txt -o wordlist.txt
 ### Sort and remove duplicates
@@ -129,7 +138,19 @@ tr '[:upper:]' '[:lower:]' < wordlist.txt > lowercase.txt
 
 wc -l wordlist.txt
 # Count lines
+
+grep -E '^.{6,}$' jane.txt | grep -E '[A-Z]' | grep -E '[a-z]' | grep -E '[0-9]' | grep -E '([!@#$%^&*].*){2,}' > jane-filtered.txt
+### min len: 6 chars, at least one of each uppercase/lowercase/number and 2 special chars from (!@#$%^&*)
 ```
 
+
+---
+
+## Hydra
+
+```shell
+hydra -l administrator -x 6:8:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 192.168.1.100 rdp
+### RDP Brute-Forcing with passwords length from 6:8 chars using the -x set 
+```
 
 ---
