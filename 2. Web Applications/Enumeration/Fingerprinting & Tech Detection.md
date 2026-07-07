@@ -1,6 +1,7 @@
 
 ## Attack Surface:
 
+- [ ] Look for all the DNS using dig
 - [ ] `Wappalyzer` browser extension - passive tech detection
 - [ ] `BuiltWith` - external only, no requests to target
 - [ ] [[#WhatWeb]] CLI - active tech fingerprinting
@@ -12,6 +13,22 @@
 - [ ] Check cookies for framework hints (PHPSESSID, JSESSIONID, .ASPXAUTH)
 
 ---
+
+### DNS
+```sh
+dig @<server_ip> -x <ip>
+### reverse lookup
+
+dig @<server_ip> axfr <ip>
+### IF DNS IS ON TCP, check for zone transfers
+
+nslookup
+> server <server_ip>
+> <server_ip>
+### this wil lreturn us with the reverse lookup
+```
+DNS on TCP is usually only needed for zone transfers.
+
 ### Banner Grabbing
 ```bash
 curl -I inlanefreight.com

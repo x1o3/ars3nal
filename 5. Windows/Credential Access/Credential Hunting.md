@@ -20,6 +20,9 @@
 Sensitive IIS information such as credentials may be stored in a `web.config` file. For the default IIS website, this could be located at `C:\inetpub\wwwroot\web.config`.
 
 ```PowerShell
+C:\htb> dir /R
+### shows hidden files 
+
 C:\htb> cd c:\Users\htb-student\Documents & findstr /SI /M "password" *.xml *.ini *.txt *.config *.cfg *.env *.xlsx *.ps1 *.bat
 ### Search File Contents for String - Example 1
 
@@ -38,7 +41,7 @@ C:\htb> dir /S /B *pass*.txt == *pass*.xml == *pass*.ini == *cred* == *vnc* == *
 C:\htb> where /R C:\ *.config
 ### Search for File - Example 2
 
-PS C:\htb> Get-ChildItem C:\ -Recurse -Include *.rdp, *.config, *.vnc, *.cred -ErrorAction Ignore
+PS C:\htb> Get-ChildItem C:\ -Recurse -Include *.kdbx, * *.rdp, *.config, *.vnc, *.cred -ErrorAction Ignore
 ### Search for File Extensions Using PowerShell
 
 PS C:\htb> findstr /SIM /C:"password" ".txt" ".ini" ".cfg" ".config" ".xml"
