@@ -362,7 +362,7 @@ RETURN p
 
 ```
 1. Search for starting node (compromised user)
-2. Right-click → "Mark as Owned"
+2. Right-click then "Mark as Owned"
 3. Run query: "Shortest Path from Owned Principals"
 4. Analyze path edges
 ```

